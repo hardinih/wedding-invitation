@@ -1,0 +1,699 @@
+/* BACKGROUND MENETAP */
+.bgWrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 8vh;
+}
+
+/* BACKGROUND FIXED */
+.bgWrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.35)
+    ),
+    url("/bgmain2.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* SECTION */
+.section {
+  min-height: calc(var(--real-vh, 1vh) * 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+/* HOME CONTENT */
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 720px;
+}
+
+/* TITLE */
+.title {
+  font-family: "playfair display", serif;
+  color: #fff;
+  font-size: 1.75rem;        
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.19rem;   
+  line-height: 1.6;
+  transform: translateY(clamp(-20vh, -19vh, -18vh));
+}
+
+/* COUPLE */
+.couple {
+  font-size: 2.6rem;
+  font-family: "allura", cursive;
+  font-weight: 600;
+  color: #f1ac59;
+  transform: translateY(-20vh);
+}
+
+/* TEXT */
+.textWrapper {
+  text-align: center;
+  padding: 0 1.5rem;
+  transform: translateY(15vh);
+}
+
+.terjemah {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  font-family: "playfair display", serif;
+  font-weight: bold;
+}
+
+.ayat {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin: 1rem 0 2rem;
+}
+
+
+/* ===== MEMPELAI SECTION ===== */
+.mempelaiWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+/* SALAM */
+.salamMempelai {
+  font-family: "playfair display", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 3rem;
+}
+
+/* TITLE */
+.sectionTitle {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2.5rem;
+  color: #f5e6d3;
+}
+
+/* GRID MEMPELAI */
+.mempelaiGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+/* CARD */
+.mempelaiCard {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+}
+
+/* FOTO */
+.mempelaiFoto {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  border: 3px solid rgba(255,255,255,0.6);
+}
+
+/* NAMA */
+.mempelaiNama {
+  font-size: 1.4rem;
+  font-family: "allura", cursive;
+  color: #f1ac59;
+  margin-bottom: 0.5rem;
+}
+
+/* DESKRIPSI */
+.mempelaiDesc {
+  font-size: 0.9rem;
+  font-family: "playfair display", serif;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .mempelaiGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* EVENT SECTION */
+.eventSection {
+  min-height: calc(var(--real-vh, 1vh) * 100);
+  padding: 10vh 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+  background: rgba(255, 255, 255, 0.135);
+}
+
+/* ROW */
+.eventRow {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* LABEL */
+.labelLeft,
+.labelRight {
+  width: 3.5rem;
+  background: linear-gradient(to bottom, #dac391, #e4b25b);
+  font-family: "playfair display", serif;
+  color: rgb(254, 254, 254);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+}
+
+.labelLeft {
+  transform: rotate(180deg);
+}
+
+.labelRight {
+  margin-left: 0;
+}
+
+/* CARD */
+.eventCard {
+  background: rgb(246, 238, 212);
+  padding: 3rem 1.5rem;
+  width: 100%;
+  max-width: 22rem;
+  text-align: center;
+  box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+.eventCard h3 {
+  font-size: 1rem;
+  font-family: "playfair display", serif;
+  font-weight: bold;
+  color: rgb(8, 8, 8);
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  font-size: 3rem;
+  font-family: "allura", cursive;
+  color: black;
+  font-weight: bold;
+  margin: 0.5rem ;
+}
+
+.month {
+  font-size: 1rem;
+  font-family: "playfair display", serif;
+  color: rgb(9, 9, 9);
+  margin-bottom: 0.5rem;
+}
+
+
+.time {
+  font-size: 0.95rem;
+  font-family: "playfair display", serif;
+  color: rgb(8, 8, 8);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.placeTitle {
+  font-size: 0.95rem;
+  font-family: "playfair display", serif;
+  color: rgb(8, 8, 8);
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.address {
+  font-size: 0.85rem;
+  font-family: "playfair display", serif;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* MAP BUTTON */
+.mapButton {
+  
+  padding: 0.75rem 1.5rem;
+  background: #ecc45d;
+  font-family: "playfair display", serif;
+  color: white;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ======================
+   OUR GALLERY (LANDSCAPE ONLY)
+====================== */
+.gallerySection {
+  padding: 12vh 1.5rem;
+  background: linear-gradient(to bottom, #e4b25b, #dac391);
+  margin-bottom: 10vh;
+}
+
+.galleryTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fdfafae7;
+  margin-bottom: 4rem;
+  font-family: "Playfair Display", serif;
+}
+
+.galleryTitle span {
+  display: block;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* GRID */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* ITEM */
+.galleryItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+
+  /* 🔥 PAKSA LANSKAP */
+  aspect-ratio: 16 / 9;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* foto portrait tetap masuk */
+  object-position: center;
+  display: block;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .galleryGrid {
+    gap: 1.5rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .galleryGrid {
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+}
+
+
+/* ======================
+   LIGHTBOX
+====================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+/* CLOSE BUTTON */
+.closeBtn {
+  position: fixed;
+  top: 4vh;
+  right: 1.5rem;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(253, 252, 252, 0.25);
+  border: none;
+  color: rgb(10, 10, 10);
+  font-size: 2.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navBtn.left {
+  left: 1rem;
+}
+
+.navBtn.right {
+  right: 1rem;
+}
+
+/* ================= GIFT ================= */
+.giftSection {
+  background-color: #f2d58d;
+  padding: 10vh 6vw;
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.giftWrapper {
+  max-width: 28rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* ================= TITLE ================= */
+.giftTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  color: #1a1a1a;
+  margin-bottom: 2vh;
+}
+
+/* ================= DESKRIPSI ================= */
+.giftDesc {
+  font-size: 0.95rem;
+  font-family: "playfair display", serif;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 4vh;
+  padding: 0 1vw;
+}
+
+/* ================= TOGGLE BUTTON ================= */
+.giftToggleBtn {
+  background-color: #f0be41;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 999rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  box-shadow: 0 1.5vh 3vh rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+
+.giftToggleBtn:active {
+  transform: scale(0.95);
+}
+
+/* ================= CARD CONTAINER ================= */
+.giftCardContainer {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ================= BANK CARD ================= */
+.giftCard {
+  background: linear-gradient(135deg, #f8bc25 0%, #d6d9df 100%);
+  border-radius: 1.4rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2vh 4vh rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+/* Dekorasi lingkaran */
+.giftCard::before {
+  content: "";
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.8) 0%,
+    rgba(255,255,255,0) 70%
+  );
+  top: -6rem;
+  left: 30%;
+  border-radius: 50%;
+}
+
+/* ================= CARD TOP ================= */
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3vh;
+  position: relative;
+}
+
+.cardChip {
+  width: 3rem;
+  height: 2.1rem;
+  background: linear-gradient(135deg, #e2c07d, #b38d45);
+  border-radius: 0.4rem;
+}
+
+.bankName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ================= CARD MID ================= */
+.cardMid {
+  margin-bottom: 2.5vh;
+}
+
+.cardOwner {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 0.4vh;
+}
+
+.cardNumber {
+  font-size: 1.1rem;
+  color: #000;
+  letter-spacing: 0.12rem;
+}
+
+/* ================= COPY BUTTON ================= */
+.copyBtn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  width: 7.5rem;
+  height: 2.6rem;
+  border-radius: 0.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ================= ADDRESS CARD ================= */
+.addressCard {
+  background: #ecbb50;
+  border-radius: 1.4rem;
+  padding: 3vh 2vw;
+  text-align: center;
+  box-shadow: 0 2vh 4vh rgba(0,0,0,0.15);
+}
+
+.giftIcon {
+  font-size: 2.4rem;
+  margin-bottom: 1.5vh;
+}
+
+.lineSeparator {
+  height: 0.2rem;
+  background-color: #000;
+  width: 80%;
+  margin: 1vh auto 2vh auto;
+}
+
+.addressText {
+  font-size: 0.85rem;
+  color: #333;
+  font-family: "playfair display", serif;
+  line-height: 1.6;
+  margin-bottom: 2vh;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= WISH ================= */
+
+.wishSection {
+  padding: 4rem 1.2rem;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.wishTitle {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.wishIntro {
+  font-size: 1rem;
+  font-family: "playfair display", serif;
+  color: #fafafa;
+  font-weight: 900;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.wishBox {
+  max-width: 40rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+}
+
+/* FORM */
+.wishForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.wishForm input,
+.wishForm textarea {
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #5f5555;
+  outline: none;
+  color: #3a2a1a;
+}
+
+.wishForm textarea {
+  min-height: 6rem;
+  resize: none;
+  color: #3a2a1a;
+}
+
+.wishForm button {
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  background: #7a5c3e; /* nuansa jawa */
+  color: rgb(253, 250, 250);
+  cursor: pointer;
+  font-family: "Playfair Display", serif;
+}
+
+/* LIST */
+.wishList {
+  max-height: 40vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-right: 0.3rem;
+  
+}
+
+.wishCard {
+  background: #fefefe;
+  border-radius: 0.8rem;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.wishCard h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: black;
+  font-family: "playfair display", serif;
+}
+
+.wishCard p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #3a2a1a;
+  font-family: "playfair display", serif;
+}
+
+.emptyWish {
+  font-size: 0.95rem;
+  opacity: 0.6;
+  color: black;
+}
