@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./navbar";
+import BackgroundMusic from "../components/BackgroundMusic";
 import { collection, addDoc, serverTimestamp, onSnapshot, query, orderBy } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 
@@ -16,6 +17,12 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const audioRef = useRef(null);
+
+  <>
+  <BackgroundMusic />
+  {/* konten undangan */}
+</>
+
 
   // Setup audio on mount (check for auto-play)
   useEffect(() => {

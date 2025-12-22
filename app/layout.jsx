@@ -1,22 +1,33 @@
-"use client";
-import { useRef } from "react";
 import "./globals.css";
 
-export default function RootLayout({ children }) {
-  const audioRef = useRef(null);
+export const metadata = {
+  metadataBase: new URL("https://wedding-invitation-gold-mu.vercel.app"),
 
+  title: "Undangan Pernikahan Nurul & Wahyu",
+  description: "Undangan Pernikahan Nurul & Wahyu",
+
+  openGraph: {
+    title: "Undangan Pernikahan Nurul & Wahyu",
+    description: "Undangan Pernikahan Nurul & Wahyu",
+    url: "https://wedding-invitation-gold-mu.vercel.app",
+    siteName: "Undangan Nurul & Wahyu",
+    images: [
+      {
+        url: "/preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Undangan Pernikahan Nurul & Wahyu",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+};
+
+export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body>
-        <audio
-          ref={audioRef}
-          id="bg-music"
-          src="/music/backsound.mp3"
-          loop
-          preload="auto"
-        />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
