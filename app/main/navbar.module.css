@@ -60,3 +60,8 @@
   background-color: rgba(178, 139, 50, 0.6);
   border-radius: 1rem;
 }
+
+.musicActive {
+  color: #d4af37 !important;
+  transform: translateY(-0.5vh) scale(1.15);
+}

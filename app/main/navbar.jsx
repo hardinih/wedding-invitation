@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 
-export default function Navbar() {
+export default function Navbar({ audioRef, isPlaying, setIsPlaying }) {
   const [active, setActive] = useState("home");
 
   // SCROLL MANUAL (TANPA HASH / HISTORY)
@@ -14,6 +14,19 @@ export default function Navbar() {
         behavior: "smooth",
         block: "start",
       });
+    }
+  };
+
+  const toggleMusic = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+        setIsPlaying(false);
+      } else {
+        audio.play().catch(() => {});
+        setIsPlaying(true);
+      }
     }
   };
 
@@ -86,6 +99,14 @@ export default function Navbar() {
         aria-label="Wish"
       >
         💬
+      </button>
+
+      <button
+        onClick={toggleMusic}
+        className={isPlaying ? styles.musicActive : ""}
+        aria-label="Toggle Music"
+      >
+        {isPlaying ? "🔊" : "🔇"}
       </button>
     </nav>
   );

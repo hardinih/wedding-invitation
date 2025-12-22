@@ -143,10 +143,17 @@
 
 /* NAMA */
 .mempelaiNama {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-family: "allura", cursive;
   color: #f1ac59;
   margin-bottom: 0.5rem;
+   text-shadow:
+    -0.08rem -0.08rem 0 #5a3b2e,
+     0.08rem -0.08rem 0 #5a3b2e,
+    -0.08rem  0.08rem 0 #5a3b2e,
+     0.08rem  0.08rem 0 #5a3b2e;
+  
+  
 }
 
 /* DESKRIPSI */
@@ -226,7 +233,7 @@
 
 .date {
   font-size: 3rem;
-  font-family: "allura", cursive;
+  font-family: "times new roman", serif;
   color: black;
   font-weight: bold;
   margin: 0.5rem ;
@@ -282,7 +289,7 @@
    OUR GALLERY (LANDSCAPE ONLY)
 ====================== */
 .gallerySection {
-  padding: 12vh 1.5rem;
+  padding: 6vh 5vw;
   background: linear-gradient(to bottom, #e4b25b, #dac391);
   margin-bottom: 10vh;
 }
@@ -307,7 +314,7 @@
 .galleryGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 2vh;
 }
 
 /* ITEM */
@@ -317,7 +324,7 @@
   border-radius: 1rem;
 
   /* 🔥 PAKSA LANSKAP */
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 16;
 }
 
 .galleryItem img {

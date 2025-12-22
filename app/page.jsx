@@ -13,6 +13,9 @@ export default function Home() {
 const handleOpenInvitation = () => {
   setIsLeaving(true);
 
+  // Set flag to auto-play music when entering main page
+  localStorage.setItem('autoPlayMusic', 'true');
+
   setTimeout(() => {
     router.push("/main");
   }, 500);

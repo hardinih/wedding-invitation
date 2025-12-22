@@ -13,21 +13,26 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [wishes, setWishes] = useState([]);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const audioRef = useRef(null);
 
-  // Play music on mount
+  // Setup audio on mount (check for auto-play)
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
       audio.volume = 0.5; // Optional: set volume
-      const playAudio = () => {
-        audio.play().catch(() => {}); // Ignore autoplay block
-      };
-      if (audio.readyState >= 2) { // HAVE_CURRENT_DATA or higher
-        playAudio();
-      } else {
-        audio.addEventListener('canplay', playAudio, { once: true });
+      audio.addEventListener('ended', () => setIsPlaying(false));
+      audio.addEventListener('play', () => setIsPlaying(true));
+      audio.addEventListener('pause', () => setIsPlaying(false));
+
+      // Check if music should auto-play from localStorage
+      const shouldAutoPlay = localStorage.getItem('autoPlayMusic') === 'true';
+      if (shouldAutoPlay) {
+        localStorage.removeItem('autoPlayMusic'); // Clear the flag
+        audio.play().catch(() => {
+          // If autoplay fails (like on iOS), user can still use manual controls
+        });
       }
     }
   }, []);
@@ -87,7 +92,11 @@ useEffect(() => {
     "/gallery/3.jpg",
     "/gallery/4.jpg",
     "/gallery/5.jpg",
-    "/gallery/6.jpg",
+    "/gallery/15.jpg",
+    "/gallery/16.jpg",
+    "/gallery/12.jpg",
+    "/gallery/13.jpg",
+    "/gallery/14.jpg",
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -110,7 +119,7 @@ useEffect(() => {
 
   return (
     <>
-      <Navbar />
+      <Navbar audioRef={audioRef} isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
 
       {/* BACKGROUND GLOBAL */}
       <div className={styles.bgWrapper}>
@@ -174,7 +183,7 @@ useEffect(() => {
               <h3>Minggu</h3>
               <div className={styles.date}>11</div>
               <p className={styles.month}>Januari 2026</p>
-              <p className={styles.time}>09.00 - 11.00 WIB</p>
+              <p className={styles.time}>08.00 - 10.00 WIB</p>
               <p className={styles.placeTitle}>Gedung Krida Bhakti</p>
               <p className={styles.address}>
                 Jl. Veteran No.12A, Jakarta Pusat
@@ -194,7 +203,7 @@ useEffect(() => {
               <h3>Minggu</h3>
               <div className={styles.date}>11</div>
               <p className={styles.month}>Januari 2026</p>
-              <p className={styles.time}>11.00 - Selesai</p>
+              <p className={styles.time}>11.00 - 13.00</p>
               <p className={styles.placeTitle}>Gedung Krida Bhakti</p>
               <p className={styles.address}>
                 Jl. Veteran No.12A, Jakarta Pusat
