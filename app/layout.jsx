@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://wedding-invitation-gold-mu.vercel.app"),
+  metadataBase: new URL("https://wedding-invitation-nurul-wahyu.vercel.app"),
 
   title: "Undangan Pernikahan Nurul & Wahyu",
   description: "Undangan Pernikahan Nurul & Wahyu",
@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Undangan Pernikahan Nurul & Wahyu",
     description: "Undangan Pernikahan Nurul & Wahyu",
-    url: "https://wedding-invitation-gold-mu.vercel.app",
+    url: "https://wedding-invitation-nurul-wahyu.vercel.app",
     siteName: "Undangan Nurul & Wahyu",
     images: [
       {
