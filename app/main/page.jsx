@@ -394,7 +394,7 @@ useEffect(() => {
             className={styles.copyBtn}
             onClick={() =>
               navigator.clipboard.writeText(
-                "Taman Wisma Asri, Jl Durian VII, Blok C12 No.1, RT 003 RW 005, Teluk Pucung, Bekasi Utara, Kota Bekasi"
+                "Taman Wisma Asri 2, Blok AA31 No.38, RT 003 RW 025, Teluk Pucung, Bekasi Utara, Kota Bekasi"
               )
             }
           >
