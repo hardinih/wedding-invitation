@@ -385,9 +385,9 @@ useEffect(() => {
 
           <p className={styles.cardOwner}>Eka Nurul Afifah</p>
           <p className={styles.addressText}>
-            Puri Harapan Blok E5 No.30, RT 08,
-            RW 016, Kel. Setia Asih, Kec. Tarumajaya, 
-            Kab. Bekasi, Jawa Barat
+            Taman Wisma Asri 2, Blok AA32 No.38, RT 003,
+            RW 025, Kel. Teluk Pucung, Kec. Bekasi Utara, 
+            Kota. Bekasi, Jawa Barat
           </p>
 
           <button
