@@ -184,6 +184,9 @@ useEffect(() => {
 
         {/* ================= EVENT ================= */}
         <section id="event" className={styles.eventSection}>
+            <h2 className={styles.eventTitle}>
+            Wedding <span>Event</span>
+            </h2>
           <div className={styles.eventRow}>
             <div className={styles.labelLeft}>Akad</div>
             <div className={styles.eventCard}>
