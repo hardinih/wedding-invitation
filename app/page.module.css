@@ -48,7 +48,7 @@
 .guestName {
   position: absolute;
   font-family: "playfair display", serif;
-  top: 50vh;        /* atur sesuai selera */
+  top:  45vh;        /* atur sesuai selera */
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.20rem;
